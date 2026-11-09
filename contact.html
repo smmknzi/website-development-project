@@ -61,7 +61,58 @@
                 </table>
             </div>
 
+<div id="contact-form">
+    <form>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
 
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
 
-    </body>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="" selected disabled hidden>Select the priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear Form</button>
+    </form>
+</div>
+
+<div id="contact-success" style="display: none;">
+    <p>Thank you for contacting me! Your message has been sent successfully and is shown below!</p>
+    <div id="message-display"></div>
+    <button type="button" onclick="hideContactSuccess()">Close</button>
+</div>
+
+<script>
+    const form = document.querySelector('#contact-form form');
+    const success = document.getElementById('contact-success');
+    const display = document.getElementById('message-display');
+
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        display.textContent = `Email: ${form.email.value}\nSubject: ${form.subject.value}\n\n${form.message.value}`;
+        display.style.whiteSpace = 'pre-wrap';
+        success.style.display = 'block';
+    };
+
+    function hideContactSuccess() {
+        success.style.display = 'none';
+    }
+</script>
+
+    
 </html>
