@@ -16,7 +16,7 @@ html {
 body {
     color: #740f0c;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 22px;
     margin: 0px;
     padding: 24px;
 }
@@ -277,7 +277,7 @@ img {
 
 .glaze-photos figcaption {
     padding: 10px;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     color: #740f0c;
 }
@@ -339,7 +339,7 @@ img {
     background-color: #edebe2;
     color: #740f0c;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #contact-form input::placeholder,
@@ -373,7 +373,7 @@ img {
     background-color: #740f0c;
     color: #edebe2;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
